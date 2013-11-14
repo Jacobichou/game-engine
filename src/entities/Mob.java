@@ -18,6 +18,7 @@ public abstract class Mob extends Entity {
 	 * @param level
 	 * @param name
 	 * @param x
+	 * @param y
 	 * @param speed
 	 */
 	public Mob(Level level, String name, int x, int y, int speed) {
