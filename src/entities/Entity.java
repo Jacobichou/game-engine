@@ -5,8 +5,8 @@ import level.Level;
 
 public abstract class Entity {
 
-	public int x;
-	public int y;
+	public int x;	//x coords
+	public int y;	//y coords
 	
 	public Level level;
 	

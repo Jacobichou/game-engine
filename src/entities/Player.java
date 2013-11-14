@@ -7,13 +7,24 @@ import level.Level;
 
 public class Player extends Mob {
 	
+	/*
+	 * Inherits these from Entity<-Mob:
+	 * int x
+	 * int y
+	 * protected String name;
+	 * protected int speed;
+	 * protected int numSteps = 0;
+	 * protected boolean isMoving;
+	 * protected int movingDir = 1;
+	 * protected int scale = 1;
+	 */
 	private InputHandler input;
 								// 555, -1, 111, 521, 543
 	private int color = Colors.get(000, 222, 333, 555, 444);
 	private int scale = 1;
 
-	public Player(Level level, int x, int y, InputHandler input) {
-		super(level, "A dude", x, y, 1);
+	public Player(Level level, String name, int x, int y, InputHandler input) {
+		super(level, name, x, y, 1);
 		this.input = input;
 	}
 

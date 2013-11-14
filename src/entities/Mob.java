@@ -1,16 +1,19 @@
 package entities;
 
-import gfx.Screen;
 import level.Level;
 
 public abstract class Mob extends Entity {
-	
-	protected String name;
-	protected int speed;
-	protected int numSteps = 0;
-	protected boolean isMoving;
-	protected int movingDir = 1; //0 is up; 1 is down; 2 is left; 3 is right
-	protected int scale = 1;
+	/*
+	 * Inherits these from Entity:
+	 * int x
+	 * int y
+	 */
+	protected String name;			//name of mob
+	protected int speed;			//modifies movement speed across the window
+	protected int numSteps = 0;		//how many steps have been taken; in case we want to implement something which makes use of this
+	protected boolean isMoving;		//if mob is moving or not
+	protected int movingDir = 1;	//0 is up; 1 is down; 2 is left; 3 is right
+	protected int scale = 1;		//size scale; 1 is normal size
 
 	/**
 	 * Constructor for Mob which extends the Entity class.
