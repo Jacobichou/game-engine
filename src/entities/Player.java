@@ -24,7 +24,7 @@ public class Player extends Mob {
 	private int scale = 1;
 
 	public Player(Level level, String name, int x, int y, InputHandler input) {
-		super(level, name, x, y, 1);
+		super(level, name, x, y, 1); //1 is the speed
 		this.input = input;
 	}
 

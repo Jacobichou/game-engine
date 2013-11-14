@@ -23,8 +23,9 @@ public abstract class Mascot extends Mob {
  	protected int modifierType;    			//corresponds to a number 0 - 3; each number modifies game play in a unique way
  	protected int pointWorth;				//how much is this mascot worth
 
-	public Mascot(Level level, String name, int x, int y, int speed) {
+	public Mascot(Level level, String name, String school, int x, int y, int speed) {
 		super(level, name, x, y, speed);
+		this.school = school;
 	}
 
 	@Override
