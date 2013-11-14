@@ -1,8 +1,9 @@
 package game;
 
+import entities.Blazers;
+import entities.Bulldogs;
+import entities.Mascot;
 import entities.Player;
-import gfx.Colors;
-import gfx.Font;
 import gfx.Screen;
 import gfx.SpriteSheet;
 
@@ -49,6 +50,8 @@ public class Game extends Canvas implements Runnable{
     public InputHandler input;
     public Level level;
     public Player player;
+    public Mascot m1;
+    public Mascot m2;
 
     public Game() {
         setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
@@ -89,6 +92,10 @@ public class Game extends Canvas implements Runnable{
     	level = new Level(64,64);
     	player = new Player(level, "That's me!", 0, 0, input);
     	level.addEntity(player);
+    	m1  = new Blazers(level, 20, 100);
+    	level.addEntity(m1);
+    	m2 = new Bulldogs(level, 50, 100);
+    	level.addEntity(m2);
     }
 
     public synchronized void start() {
@@ -161,8 +168,6 @@ public class Game extends Canvas implements Runnable{
     	
     	//level tick to make Level update if anything is going on in Level.tick()
     	level.tick();
-    	
-    	System.out.println(colors.toString());
     }
     
     public void render() {

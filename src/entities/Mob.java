@@ -24,9 +24,9 @@ public abstract class Mob extends Entity {
 	 * @param y
 	 * @param speed
 	 */
-	public Mob(Level level, String name, int x, int y, int speed) {
+	public Mob(Level level, int x, int y, int speed) {
 		super(level);
-		this.name = name;
+//		this.name = name;
 		this.x = x;
 		this.y = y;
 		this.speed = speed;

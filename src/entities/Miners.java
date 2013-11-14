@@ -4,9 +4,10 @@ import level.Level;
 
 public class Miners extends Mascot {
 
-	public Miners(Level level, int x, int y,
-			int speed) {
-		super(level, "Miners", "UTEP", x, y, speed);
+	public Miners(Level level, int x, int y) {
+		super(level, x, y);
+		this.name = "Miners";
+		this.school = "UTEP";
 	}
 
 }
